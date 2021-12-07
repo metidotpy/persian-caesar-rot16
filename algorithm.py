@@ -25,7 +25,7 @@ class Encrypt:
         for char in text:
             if char in PERSIAN_ALPHABET[0:16]:
                 encrypted_char = PERSIAN_ALPHABET[PERSIAN_ALPHABET.index(char) + 16]
-            elif char in PERSIAN_ALPHABET[16:31]:
+            elif char in PERSIAN_ALPHABET[16::]:
                 encrypted_char = PERSIAN_ALPHABET[PERSIAN_ALPHABET.index(char) - 16]
             elif char in PERSIAN_NUMBERS:
                 encrypted_char = PERSIAN_NUMBERS[char]
@@ -61,7 +61,7 @@ class Decrypt:
         for char in text:
             if char in PERSIAN_ALPHABET[0:16]:
                 decrypted_char = PERSIAN_ALPHABET[PERSIAN_ALPHABET.index(char) + 16]
-            elif char in PERSIAN_ALPHABET[16:31]:
+            elif char in PERSIAN_ALPHABET[16::]:
                 decrypted_char = PERSIAN_ALPHABET[PERSIAN_ALPHABET.index(char) - 16]
             elif char in PERSIAN_NUMBERS:
                 decrypted_char = PERSIAN_NUMBERS[char]
